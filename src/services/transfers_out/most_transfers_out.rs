@@ -6,17 +6,17 @@ pub fn get_most_transfers_out() -> Value {
             {
                 "player": "Maguire",
                 "form": 0.4,
-                "transfers_in": 12154
+                "transfers_out": 12154
             },
             {
                 "player": "Dier",
-                "form": 1.0,
-                "transfers_in": 8922
+                "form": 0.7,
+                "transfers_out": 8922
             },
             {
-                "player": "Grealish",
-                "form": 4.9,
-                "transfers_in": 82652
+                "player": "Mudryk",
+                "form": 0.8,
+                "transfers_out": 8265
             },
         ]
     })
