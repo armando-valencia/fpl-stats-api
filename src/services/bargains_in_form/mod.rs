@@ -1,0 +1,1 @@
+pub mod bargains_in_form;

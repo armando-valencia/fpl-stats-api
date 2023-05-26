@@ -7,6 +7,7 @@ pub mod services;
 
 use routes::index::index;
 use routes::transfers::{get_transfers_in, get_transfers_out};
+use routes::points::{get_bargains_in_form, get_goal_contributors, get_mr_reliable};
 
 #[catch(500)]
 fn not_found() -> Value {
@@ -19,6 +20,8 @@ fn not_found() -> Value {
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-        .mount("/", routes![index, get_transfers_in, get_transfers_out])
+        .mount("/", routes![index])
+        .mount("/points", routes![get_bargains_in_form, get_goal_contributors, get_mr_reliable])
+        .mount("/transfers", routes![get_transfers_in, get_transfers_out])
         .register("/", catchers![not_found])
 }
